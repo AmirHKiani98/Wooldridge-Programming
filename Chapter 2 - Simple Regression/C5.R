@@ -1,6 +1,10 @@
 
 # Setting the script directory as working directory
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+
+# Reading the data
+rdchem <- read.csv("RDCHEM.csv")
+
 # (i) - Write down a model (not an estimated equation) that implies a constant elasticity
 # between rd and sales . Which parameter is the elasticity?
 "
@@ -8,9 +12,6 @@ The constant elasticity model is a log-log model(from the solution book)
 so the equation is : log(rd) = beta0 + beta1 * log(sales) + u
 elasticity = beta1
 "
-# Reading the data
-rdchem <- read.csv("RDCHEM.csv")
-
 # (ii) - Now, estimate the model using the data in RDCHEM.RAW. Write out the 
 # estimated equation in the usual form. What is the estimated elasticity of rd 
 # with respect to sales ? Explain in words what this elasticity means.
